@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO ============ -->
+  <title>Ammi ka Bagh — Naturally Grown with Love | Backyard Garden, East Brunswick</title>
+  <meta name="description" content="Ammi ka Bagh is a small family backyard garden in East Brunswick growing grapes, blueberries, strawberries, tomatoes, chillies, watermelon and mint — naturally, with love. No mass production, just handpicked freshness." />
+  <meta name="keywords" content="backyard garden, naturally grown, fresh fruits, East Brunswick, grapes, blueberries, strawberries, tomatoes, chillies, watermelon, mint" />
+  <meta name="author" content="Raziya Begum" />
+  <meta property="og:title" content="Ammi ka Bagh — Naturally Grown with Love" />
+  <meta property="og:description" content="A small family backyard garden growing fresh fruits and veggies naturally, with care and patience." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#5c7c4e" />
+
+  <!-- ============ Fonts ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ============ Tailwind CSS (CDN) ============ -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* Tailwind theme — soft green, earthy brown, cream + fruit accents */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            leaf:   { 50:'#f3f7ef', 100:'#e4eedb', 200:'#c8dcb6', 300:'#a4c48b', 400:'#7fa963', 500:'#5c7c4e', 600:'#4a6540', 700:'#3b5134', 800:'#2f4029', 900:'#26331f' },
+            earth:  { 100:'#f0e6d8', 200:'#e0cdb2', 300:'#c8a97e', 400:'#a97e4f', 500:'#8a5f36', 600:'#6f4a29', 700:'#573a20' },
+            cream:  { 50:'#fdfbf5', 100:'#faf5e9', 200:'#f3ead6' },
+            berry:  '#7b4b94',
+            tomato: '#d9482b',
+            straw:  '#e04a59'
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body: ['"Nunito Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- ============ Custom styles (animations, masonry, a11y) ============ -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ============ Structured data for search engines ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Ammi ka Bagh",
+    "slogan": "Naturally grown with love.",
+    "description": "A small family backyard garden growing fruits and vegetables naturally.",
+    "address": { "@type": "PostalAddress", "addressLocality": "East Brunswick", "addressRegion": "NJ", "addressCountry": "US" },
+    "founder": { "@type": "Person", "name": "Raziya Begum" }
+  }
+  </script>
+</head>
+
+<body class="font-body bg-cream-50 text-leaf-800 antialiased">
+
+  <!-- Accessibility: skip straight to content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ==================================================================
+       HEADER / NAVIGATION
+  =================================================================== -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 bg-cream-50/80 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6" aria-label="Main navigation">
+      <!-- Brand -->
+      <a href="#home" class="flex items-center gap-2 text-xl font-bold text-leaf-700">
+        <span aria-hidden="true" class="text-2xl">🌿</span>
+        <span class="font-display">Ammi <span class="text-earth-500">ka</span> Bagh</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="hidden items-center gap-6 text-sm font-semibold md:flex">
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#fruits">Our Fruits</a></li>
+        <li><a class="nav-link" href="#why-us">Why Us</a></li>
+        <li><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li><a class="nav-link" href="#seasons">Seasons</a></li>
+        <li><a class="nav-link" href="#faq">FAQ</a></li>
+        <li>
+          <a href="#contact" class="rounded-full bg-leaf-500 px-4 py-2 text-cream-50 shadow-sm transition hover:bg-leaf-600 focus-visible:ring-2 focus-visible:ring-leaf-300">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="rounded-lg p-2 text-leaf-700 hover:bg-leaf-100 md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden border-t border-leaf-100 bg-cream-50 px-6 pb-4 md:hidden">
+      <ul class="flex flex-col gap-1 pt-2 text-sm font-semibold">
+        <li><a class="mobile-link" href="#about">About</a></li>
+        <li><a class="mobile-link" href="#fruits">Our Fruits</a></li>
+        <li><a class="mobile-link" href="#why-us">Why Us</a></li>
+        <li><a class="mobile-link" href="#gallery">Gallery</a></li>
+        <li><a class="mobile-link" href="#seasons">Seasons</a></li>
+        <li><a class="mobile-link" href="#faq">FAQ</a></li>
+        <li><a class="mobile-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================================================================
+         1. HERO
+    =================================================================== -->
+    <section id="home" class="relative flex min-h-[92vh] items-center justify-center overflow-hidden" aria-label="Welcome">
+      <!-- Background image (replace src to change hero photo) -->
+      <img
+        src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1800&q=80"
+        alt="A lush green backyard garden bathed in morning light"
+        class="absolute inset-0 h-full w-full object-cover"
+        data-fallback="garden" fetchpriority="high" />
+      <!-- Soft overlay so text stays readable -->
+      <div class="absolute inset-0 bg-gradient-to-b from-leaf-900/55 via-leaf-900/35 to-cream-50" aria-hidden="true"></div>
+
+      <div class="relative z-10 mx-auto max-w-3xl px-6 text-center hero-enter">
+        <p class="mb-4 inline-block rounded-full bg-cream-50/20 px-4 py-1 text-sm font-semibold tracking-widest text-cream-50 backdrop-blur-sm">A FAMILY BACKYARD GARDEN · EAST BRUNSWICK</p>
+        <h1 class="font-display text-5xl font-bold leading-tight text-cream-50 drop-shadow-md sm:text-6xl md:text-7xl">
+          Ammi <span class="italic text-leaf-200">ka</span> Bagh
+        </h1>
+        <p class="mt-5 text-lg font-light text-cream-100 sm:text-2xl">“Naturally grown with love.”</p>
+        <a href="#fruits"
+           class="mt-9 inline-block rounded-full bg-leaf-500 px-8 py-4 text-base font-bold text-cream-50 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-leaf-600 hover:shadow-xl focus-visible:ring-4 focus-visible:ring-leaf-300">
+          Explore Our Garden 🌱
+        </a>
+      </div>
+
+      <!-- Scroll cue -->
+      <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-cream-50/90 scroll-cue" aria-label="Scroll down to learn more">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7-7-7"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- ==================================================================
+         2. ABOUT US
+    =================================================================== -->
+    <section id="about" class="mx-auto max-w-6xl px-4 py-20 sm:px-6" aria-labelledby="about-title">
+      <div class="grid items-center gap-12 md:grid-cols-2">
+        <figure class="reveal overflow-hidden rounded-3xl shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1000&q=80"
+            alt="A quiet pathway winding through our leafy backyard garden"
+            class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+            loading="lazy" data-fallback="garden" />
+        </figure>
+
+        <div class="reveal reveal-delay-1">
+          <p class="section-eyebrow">Our Story</p>
+          <h2 id="about-title" class="section-title">A little garden, a lot of heart</h2>
+          <p class="mt-5 leading-relaxed text-leaf-700">
+            Ammi ka Bagh isn't a farm — it's our <strong>backyard</strong>. A small patch of earth behind our home
+            where every seed is sown by hand and every plant is known by name.
+          </p>
+          <p class="mt-4 leading-relaxed text-leaf-700">
+            We believe in growing <strong>naturally</strong>. No shortcuts, no mass production — just sunshine, rich soil,
+            patience, and care. Every fruit here is nurtured slowly, picked at its sweetest, and shared with joy.
+          </p>
+          <p class="mt-4 leading-relaxed text-leaf-700">
+            This is a <strong>family passion project</strong>, tended with love across seasons — from the first spring
+            seedlings to the last autumn harvest.
+          </p>
+
+          <!-- Little stats row -->
+          <dl class="mt-8 grid grid-cols-3 gap-4 text-center">
+            <div class="rounded-2xl bg-leaf-50 p-4">
+              <dt class="text-2xl font-extrabold text-leaf-600">7+</dt>
+              <dd class="mt-1 text-xs font-semibold text-leaf-500">Varieties Grown</dd>
+            </div>
+            <div class="rounded-2xl bg-earth-100 p-4">
+              <dt class="text-2xl font-extrabold text-earth-500">100%</dt>
+              <dd class="mt-1 text-xs font-semibold text-earth-400">Naturally Grown</dd>
+            </div>
+            <div class="rounded-2xl bg-cream-200 p-4">
+              <dt class="text-2xl font-extrabold text-earth-600">1</dt>
+              <dd class="mt-1 text-xs font-semibold text-earth-500">Loving Family</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         3. OUR FRUITS
+    =================================================================== -->
+    <section id="fruits" class="bg-leaf-50/60 py-20" aria-labelledby="fruits-title">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="mx-auto max-w-2xl text-center reveal">
+          <p class="section-eyebrow">Fresh From the Backyard</p>
+          <h2 id="fruits-title" class="section-title">Our Fruits &amp; Veggies</h2>
+          <p class="mt-4 text-leaf-600">A small, honest selection — grown slowly, picked by hand.</p>
+        </div>
+
+        <!-- Produce cards: duplicate a card & swap image/text to add produce -->
+        <ul class="mt-12 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3" role="list">
+
+          <li class="produce-card reveal">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?auto=format&fit=crop&w=800&q=80"
+                   alt="Bunches of ripe grapes hanging on the vine" loading="lazy" data-fallback="grapes" class="card-img" />
+              <span class="badge">🌱 Naturally Grown</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl font-semibold text-leaf-800">Grapes</h3>
+              <p class="mt-2 text-sm leading-relaxed text-leaf-600">Sweet green and red clusters ripened slowly on our backyard trellis.</p>
+              <p class="mt-3 text-xs font-bold uppercase tracking-wide text-earth-400">In season: Aug – Oct</p>
+            </div>
+          </li>
+
+          <li class="produce-card reveal reveal-delay-1">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80"
+                   alt="Fresh blueberries with a dusty blue bloom" loading="lazy" data-fallback="blueberries" class="card-img" />
+              <span class="badge">🌱 Naturally Grown</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl font-semibold text-leaf-800">Blueberries</h3>
+              <p class="mt-2 text-sm leading-relaxed text-leaf-600">Plump, dusky-blue berries bursting with gentle sweetness.</p>
+              <p class="mt-3 text-xs font-bold uppercase tracking-wide text-earth-400">In season: Jun – Aug</p>
+            </div>
+          </li>
+
+          <li class="produce-card reveal reveal-delay-2">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=800&q=80"
+                   alt="Bright red strawberries freshly picked" loading="lazy" data-fallback="strawberries" class="card-img" />
+              <span class="badge">🌱 Naturally Grown</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl font-semibold text-leaf-800">Strawberries</h3>
+              <p class="mt-2 text-sm leading-relaxed text-leaf-600">Sun-warmed, fragrant and red to the very center.</p>
+              <p class="mt-3 text-xs font-bold uppercase tracking-wide text-earth-400">In season: May – Jun</p>
+            </div>
+          </li>
+
+          <li class="produce-card reveal">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=800&q=80"
+                   alt="Vine-ripened red tomatoes" loading="lazy" data-fallback="tomatoes" class="card-img" />
+              <span class="badge">🌱 Naturally Grown</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl font-semibold text-leaf-800">Tomatoes</h3>
+              <p class="mt-2 text-sm leading-relaxed text-leaf-600">Juicy heirloom-style tomatoes, ripened fully on the vine.</p>
+              <p class="mt-3 text-xs font-bold uppercase tracking-wide text-earth-400">In season: Jul – Sep</p>
+            </div>
+          </li>
+
+          <li class="produce-card reveal reveal-delay-1">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=800&q=80"
+                   alt="Fresh red and green chillies" loading="lazy" data-fallback="chillies" class="card-img" />
+              <span class="badge">🌱 Naturally Grown</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl font-semibold text-leaf-800">Chillies</h3>
+              <p class="mt-2 text-sm leading-relaxed text-leaf-600">Glossy red and green chillies with just the right kick.</p>
+              <p class="mt-3 text-xs font-bold uppercase tracking-wide text-earth-400">In season: Jul – Oct</p>
+            </div>
+          </li>
+
+          <li class="produce-card reveal reveal-delay-2">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=800&q=80"
+                   alt="Juicy watermelon slices" loading="lazy" data-fallback="watermelon" class="card-img" />
+              <span class="badge">🌱 Naturally Grown</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl font-semibold text-leaf-800">Watermelon</h3>
+              <p class="mt-2 text-sm leading-relaxed text-leaf-600">Crisp, cooling and honey-sweet — summer in a slice.</p>
+              <p class="mt-3 text-xs font-bold uppercase tracking-wide text-earth-400">In season: Jul – Aug</p>
+            </div>
+          </li>
+
+          <li class="produce-card reveal sm:col-start-2 lg:col-start-2">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?auto=format&fit=crop&w=800&q=80"
+                   alt="Fresh green mint leaves" loading="lazy" data-fallback="mint" class="card-img" />
+              <span class="badge">🌱 Naturally Grown</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-2xl font-semibold text-leaf-800">Mint</h3>
+              <p class="mt-2 text-sm leading-relaxed text-leaf-600">Cool, fragrant mint — snipped fresh for chai, chutney and more.</p>
+              <p class="mt-3 text-xs font-bold uppercase tracking-wide text-earth-400">In season: Apr – Oct</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         4. WHY CHOOSE US
+    =================================================================== -->
+    <section id="why-us" class="mx-auto max-w-6xl px-4 py-20 sm:px-6" aria-labelledby="why-title">
+      <div class="mx-auto max-w-2xl text-center reveal">
+        <p class="section-eyebrow">The Ammi ka Bagh Difference</p>
+        <h2 id="why-title" class="section-title">Why Choose Us</h2>
+      </div>
+
+      <ul class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" role="list">
+        <!-- Each card: inline SVG icon + point -->
+        <li class="why-card reveal">
+          <span class="why-icon bg-leaf-100 text-leaf-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c4.97-1.5 8-5.5 8-10V6l-8-3-8 3v5c0 4.5 3.03 8.5 8 10z"/></svg>
+          </span>
+          <h3 class="mt-4 font-display text-xl font-semibold">Naturally Grown</h3>
+          <p class="mt-2 text-sm text-leaf-600">Nothing artificial — just soil, sun, water and patience.</p>
+        </li>
+
+        <li class="why-card reveal reveal-delay-1">
+          <span class="why-icon bg-earth-100 text-earth-500" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></svg>
+          </span>
+          <h3 class="mt-4 font-display text-xl font-semibold">Backyard Harvest</h3>
+          <p class="mt-2 text-sm text-leaf-600">Grown steps from our kitchen — not shipped across the country.</p>
+        </li>
+
+        <li class="why-card reveal reveal-delay-2">
+          <span class="why-icon bg-leaf-100 text-leaf-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M7 11.5V14a5 5 0 0010 0v-2.5M9.5 9.5a2.5 2.5 0 015 0M12 19v2"/></svg>
+          </span>
+          <h3 class="mt-4 font-display text-xl font-semibold">Handpicked Fresh</h3>
+          <p class="mt-2 text-sm text-leaf-600">Every fruit is picked by hand at peak ripeness — never before.</p>
+        </li>
+
+        <li class="why-card reveal">
+          <span class="why-icon bg-cream-200 text-earth-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M18.36 5.64a9 9 0 11-12.72 0M12 2v10"/></svg>
+          </span>
+          <h3 class="mt-4 font-display text-xl font-semibold">No Mass Production</h3>
+          <p class="mt-2 text-sm text-leaf-600">Small batches only. When it's gone, it's gone till next season.</p>
+        </li>
+
+        <li class="why-card reveal reveal-delay-1">
+          <span class="why-icon bg-leaf-100 text-leaf-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-1a4 4 0 00-3-3.87M9 20H4v-1a4 4 0 013-3.87m9-3.13a3 3 0 10-3-3m-2 3a3 3 0 11-3-3"/></svg>
+          </span>
+          <h3 class="mt-4 font-display text-xl font-semibold">Family Grown</h3>
+          <p class="mt-2 text-sm text-leaf-600">Three generations of hands in the same warm soil.</p>
+        </li>
+
+        <li class="why-card reveal reveal-delay-2">
+          <span class="why-icon bg-straw/10 text-straw" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"/></svg>
+          </span>
+          <h3 class="mt-4 font-display text-xl font-semibold">Grown with Love</h3>
+          <p class="mt-2 text-sm text-leaf-600">The secret ingredient in everything we grow — always.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ==================================================================
+         5. GALLERY (CSS masonry via columns)
+    =================================================================== -->
+    <section id="gallery" class="bg-earth-100/50 py-20" aria-labelledby="gallery-title">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="mx-auto max-w-2xl text-center reveal">
+          <p class="section-eyebrow">Moments From the Garden</p>
+          <h2 id="gallery-title" class="section-title">Garden Gallery</h2>
+          <p class="mt-4 text-leaf-600">Little glimpses of our days among the plants.</p>
+        </div>
+
+        <!-- Masonry: CSS columns; each figure avoids breaking across columns -->
+        <div class="masonry mt-12">
+          <figure class="masonry-item reveal">
+            <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=800&q=80" alt="Raised garden beds full of leafy greens" loading="lazy" data-fallback="garden" />
+            <figcaption>Our raised beds in spring</figcaption>
+          </figure>
+          <figure class="masonry-item reveal">
+            <img src="https://images.unsplash.com/photo-1543528176-61b239494933?auto=format&fit=crop&w=800&q=80" alt="A basket of freshly harvested strawberries" loading="lazy" data-fallback="strawberries" />
+            <figcaption>Morning strawberry harvest</figcaption>
+          </figure>
+          <figure class="masonry-item reveal">
+            <img src="https://images.unsplash.com/photo-1582284540020-8acbe03f4924?auto=format&fit=crop&w=800&q=80" alt="Tomatoes ripening on the vine" loading="lazy" data-fallback="tomatoes" />
+            <figcaption>Tomatoes taking their time</figcaption>
+          </figure>
+          <figure class="masonry-item reveal">
+            <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=800&q=80" alt="Family hands planting a young seedling together" loading="lazy" data-fallback="family" />
+            <figcaption>Planting together, as always</figcaption>
+          </figure>
+          <figure class="masonry-item reveal">
+            <img src="https://images.unsplash.com/photo-1425934398893-310a009a77f9?auto=format&fit=crop&w=800&q=80" alt="Blueberries ripening on the branch" loading="lazy" data-fallback="blueberries" />
+            <figcaption>Blueberries on the branch</figcaption>
+          </figure>
+          <figure class="masonry-item reveal">
+            <img src="https://images.unsplash.com/photo-1466781783364-36c955e42a7f?auto=format&fit=crop&w=800&q=80" alt="A quiet green pathway through the garden" loading="lazy" data-fallback="garden" />
+            <figcaption>The path we walk every morning</figcaption>
+          </figure>
+          <figure class="masonry-item reveal">
+            <img src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=800&q=80" alt="Close-up of fresh green leaves after rain" loading="lazy" data-fallback="mint" />
+            <figcaption>After the rain</figcaption>
+          </figure>
+          <figure class="masonry-item reveal">
+            <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=800&q=80" alt="A wooden basket filled with fresh harvest" loading="lazy" data-fallback="harvest" />
+            <figcaption>Today's little harvest</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         6. SEASONAL AVAILABILITY
+    =================================================================== -->
+    <section id="seasons" class="mx-auto max-w-6xl px-4 py-20 sm:px-6" aria-labelledby="seasons-title">
+      <div class="mx-auto max-w-2xl text-center reveal">
+        <p class="section-eyebrow">Nature Sets the Schedule</p>
+        <h2 id="seasons-title" class="section-title">Seasonal Availability</h2>
+        <p class="mt-4 text-leaf-600">We only share what's ripe. Here's when to look forward to each harvest.</p>
+      </div>
+
+      <div class="reveal mt-12 overflow-x-auto rounded-3xl bg-white shadow-md ring-1 ring-leaf-100">
+        <table class="w-full min-w-[640px] border-collapse text-sm">
+          <caption class="sr-only">Monthly availability of our produce</caption>
+          <thead>
+            <tr class="bg-leaf-50 text-leaf-700">
+              <th scope="col" class="px-4 py-3 text-left font-bold">Produce</th>
+              <th scope="col" class="px-2 py-3">Jan</th><th scope="col" class="px-2 py-3">Feb</th>
+              <th scope="col" class="px-2 py-3">Mar</th><th scope="col" class="px-2 py-3">Apr</th>
+              <th scope="col" class="px-2 py-3">May</th><th scope="col" class="px-2 py-3">Jun</th>
+              <th scope="col" class="px-2 py-3">Jul</th><th scope="col" class="px-2 py-3">Aug</th>
+              <th scope="col" class="px-2 py-3">Sep</th><th scope="col" class="px-2 py-3">Oct</th>
+              <th scope="col" class="px-2 py-3">Nov</th><th scope="col" class="px-2 py-3">Dec</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <!-- data-months lists 1-based months in season; dots are rendered by JS -->
+            <tr class="season-row border-t border-leaf-100" data-months="8,9,10"><th scope="row" class="px-4 py-3 text-left font-semibold text-leaf-800">🍇 Grapes</th></tr>
+            <tr class="season-row border-t border-leaf-100" data-months="6,7,8"><th scope="row" class="px-4 py-3 text-left font-semibold text-leaf-800">🫐 Blueberries</th></tr>
+            <tr class="season-row border-t border-leaf-100" data-months="5,6"><th scope="row" class="px-4 py-3 text-left font-semibold text-leaf-800">🍓 Strawberries</th></tr>
+            <tr class="season-row border-t border-leaf-100" data-months="7,8,9"><th scope="row" class="px-4 py-3 text-left font-semibold text-leaf-800">🍅 Tomatoes</th></tr>
+            <tr class="season-row border-t border-leaf-100" data-months="7,8,9,10"><th scope="row" class="px-4 py-3 text-left font-semibold text-leaf-800">🌶️ Chillies</th></tr>
+            <tr class="season-row border-t border-leaf-100" data-months="7,8"><th scope="row" class="px-4 py-3 text-left font-semibold text-leaf-800">🍉 Watermelon</th></tr>
+            <tr class="season-row border-t border-leaf-100" data-months="4,5,6,7,8,9,10"><th scope="row" class="px-4 py-3 text-left font-semibold text-leaf-800">🌿 Mint</th></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="reveal mt-4 text-center text-xs text-leaf-500"><span class="mr-1 inline-block h-2.5 w-2.5 rounded-full bg-leaf-400 align-middle"></span> In season &nbsp;·&nbsp; Timings are approximate and follow nature's mood each year.</p>
+    </section>
+
+    <!-- ==================================================================
+         7. TESTIMONIALS
+    =================================================================== -->
+    <section id="testimonials" class="bg-leaf-50/60 py-20" aria-labelledby="testimonials-title">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <div class="mx-auto max-w-2xl text-center reveal">
+          <p class="section-eyebrow">Kind Words</p>
+          <h2 id="testimonials-title" class="section-title">From Our Neighbors</h2>
+        </div>
+
+        <ul class="mt-12 grid gap-7 md:grid-cols-3" role="list">
+          <li class="testimonial-card reveal">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="mt-3 text-leaf-700">“The strawberries taste like my childhood. You can tell they were grown with real care — nothing from the store comes close.”</blockquote>
+            <footer class="mt-4 flex items-center gap-3">
+              <span class="avatar bg-leaf-200 text-leaf-700" aria-hidden="true">S</span>
+              <div><p class="font-bold text-leaf-800">Sarah M.</p><p class="text-xs text-leaf-500">East Brunswick</p></div>
+            </footer>
+          </li>
+          <li class="testimonial-card reveal reveal-delay-1">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="mt-3 text-leaf-700">“We picked up a basket of tomatoes and mint last weekend. The whole kitchen smelled amazing. This little garden is a neighborhood treasure.”</blockquote>
+            <footer class="mt-4 flex items-center gap-3">
+              <span class="avatar bg-earth-200 text-earth-600" aria-hidden="true">A</span>
+              <div><p class="font-bold text-leaf-800">Ahmed K.</p><p class="text-xs text-leaf-500">Milltown</p></div>
+            </footer>
+          </li>
+          <li class="testimonial-card reveal reveal-delay-2">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="mt-3 text-leaf-700">“Raziya aunty's grapes are the sweetest I've ever had. It feels wonderful knowing exactly where our fruit comes from — and who grew it.”</blockquote>
+            <footer class="mt-4 flex items-center gap-3">
+              <span class="avatar bg-cream-200 text-earth-600" aria-hidden="true">P</span>
+              <div><p class="font-bold text-leaf-800">Priya R.</p><p class="text-xs text-leaf-500">North Brunswick</p></div>
+            </footer>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         8. FAQ (accessible accordion)
+    =================================================================== -->
+    <section id="faq" class="mx-auto max-w-3xl px-4 py-20 sm:px-6" aria-labelledby="faq-title">
+      <div class="text-center reveal">
+        <p class="section-eyebrow">Good Questions</p>
+        <h2 id="faq-title" class="section-title">Frequently Asked</h2>
+      </div>
+
+      <div class="mt-10 space-y-4">
+        <div class="faq-item reveal">
+          <button class="faq-btn" aria-expanded="false">
+            <span>Are your fruits organically grown?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-panel">
+            <p>Yes — everything in Ammi ka Bagh is grown naturally, without synthetic pesticides or chemical fertilizers. We rely on compost, companion planting and a lot of patience. We're a home garden rather than a certified farm, so we say "naturally grown" instead of "certified organic."</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-btn" aria-expanded="false">
+            <span>Where is your garden?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-panel">
+            <p>Our backyard garden is in <strong>East Brunswick, New Jersey</strong>. If you're nearby, we'd love for you to stop by during harvest season — just get in touch first!</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-btn" aria-expanded="false">
+            <span>Do you deliver?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-panel">
+            <p>Yes! We deliver to <strong>nearby locations</strong> around East Brunswick when produce is in season. Since harvests are small, it's first come, first served — send us a message to arrange it.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-btn" aria-expanded="false">
+            <span>How do you grow your fruits?</span>
+            <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-panel">
+            <p><strong>Naturally.</strong> Rich homemade compost, rainwater where we can, hand-weeding, and harvesting only when fruit is truly ripe. No shortcuts — nature does the hard work, we just help her along.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         9. CONTACT
+    =================================================================== -->
+    <section id="contact" class="bg-leaf-700 py-20 text-cream-50" aria-labelledby="contact-title">
+      <div class="mx-auto grid max-w-6xl items-start gap-12 px-4 sm:px-6 md:grid-cols-2">
+        <div class="reveal">
+          <p class="section-eyebrow !text-leaf-200">Say Hello</p>
+          <h2 id="contact-title" class="font-display text-4xl font-bold">Visit Our Garden</h2>
+          <p class="mt-5 leading-relaxed text-leaf-100">
+            Questions about this week's harvest? Want to arrange a pickup or nearby delivery?
+            Drop a note — <strong>Raziya Begum</strong> reads every message herself.
+          </p>
+          <ul class="mt-8 space-y-4 text-leaf-100">
+            <li class="flex items-center gap-3">
+              <span class="contact-chip" aria-hidden="true">📍</span> East Brunswick, New Jersey
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="contact-chip" aria-hidden="true">🚚</span> Delivery to nearby locations in season
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="contact-chip" aria-hidden="true">🌱</span> Garden visits by appointment
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact form (front-end demo: shows success message on submit) -->
+        <form id="contact-form" class="reveal reveal-delay-1 rounded-3xl bg-cream-50 p-7 text-leaf-800 shadow-xl" novalidate>
+          <h3 class="font-display text-2xl font-semibold">Send a Message</h3>
+
+          <div class="mt-5">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Raziya Begum" autocomplete="name" required />
+            <p class="form-error" id="name-error" hidden>Please tell us your name.</p>
+          </div>
+
+          <div class="mt-4">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" autocomplete="email" required />
+            <p class="form-error" id="email-error" hidden>Please enter a valid email address.</p>
+          </div>
+
+          <div class="mt-4">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" rows="4" class="form-input resize-none" placeholder="I'd love a basket of strawberries this weekend…" required></textarea>
+            <p class="form-error" id="message-error" hidden>Please write a short message.</p>
+          </div>
+
+          <button type="submit" class="mt-6 w-full rounded-full bg-leaf-500 py-3.5 font-bold text-cream-50 transition hover:bg-leaf-600 focus-visible:ring-4 focus-visible:ring-leaf-300">
+            Send Message 💌
+          </button>
+
+          <p id="form-success" class="mt-4 rounded-xl bg-leaf-100 p-3 text-center text-sm font-semibold text-leaf-700" hidden role="status">
+            Thank you! Your message is on its way to the garden. 🌷
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================================================================
+       FOOTER
+  =================================================================== -->
+  <footer class="bg-leaf-900 py-10 text-leaf-200">
+    <div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 text-center">
+      <p class="font-display text-2xl font-semibold text-cream-50">🌿 Ammi ka Bagh</p>
+      <p class="text-sm italic">"Naturally grown with love."</p>
+      <nav aria-label="Footer">
+        <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-semibold">
+          <li><a class="hover:text-cream-50" href="#about">About</a></li>
+          <li><a class="hover:text-cream-50" href="#fruits">Our Fruits</a></li>
+          <li><a class="hover:text-cream-50" href="#gallery">Gallery</a></li>
+          <li><a class="hover:text-cream-50" href="#seasons">Seasons</a></li>
+          <li><a class="hover:text-cream-50" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="text-xs text-leaf-400">© <span id="year">2026</span> Ammi ka Bagh · East Brunswick, NJ · A family passion project</p>
+    </div>
+  </footer>
+
+  <!-- Behavior: menu, accordion, reveal animations, form, seasons table -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
